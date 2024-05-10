@@ -1,0 +1,31 @@
+﻿@using ListaDeTarefas.Model
+
+
+@model List<Tarefa>
+
+@{
+    ViewData["Title"] = "Tarefas a Fazer";
+}
+
+<div class="container">
+    <h2>Tarefas a Fazer</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Data de Conclusão</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tarefa in Model)
+            {
+                <tr>
+                    <td>@tarefa.Id</td>
+                    <td>@tarefa.Nome</td>
+                    <td>@tarefa.DataDeConclusao</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
